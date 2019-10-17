@@ -1,0 +1,5 @@
+SELECT O.id AS [Origin ID],
+A.content, P.url, P.visit_count, P.frecency, P.last_visit_date, O.host AS [Host URL], O.frecency AS [Host Frecency]
+FROM moz_origins O, moz_places P, moz_annos A
+WHERE A.place_id = P.id AND P.origin_id = O.id
+ORDER BY O.id
