@@ -1,3 +1,8 @@
+/*
+Matches the search history to the corresponding URL. Retrieves the frecency, last visit date,
+host url and host frecency.
+*/
+
 SELECT I.input AS [Input Term],
 O.host AS [Host URL], O.frecency AS [Host Frecency],
 P.url AS [URL], P.title, P.visit_count, P.frecency, P.last_visit_date, P.description
