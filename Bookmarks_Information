@@ -1,3 +1,8 @@
+/*
+Identifies the level of activity for each bookmark, as well as the activity to the corresponding Host.
+Retrieves the frecency, visit count, description, the Host URL and Host frecency
+*/
+
 SELECT B.title AS [Bookmark_Title], B.dateAdded AS [Date_Added], 
 P.url AS [URL], P.visit_count, P.frecency, P.last_visit_date, P.description,
 O.host AS [Host URL], O.frecency AS [Host Frecency] 
