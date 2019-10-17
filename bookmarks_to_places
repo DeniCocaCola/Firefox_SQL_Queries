@@ -1,0 +1,6 @@
+SELECT B.title AS [Bookmark_Title], B.dateAdded AS [Date_Added], 
+P.url AS [URL], P.visit_count, P.frecency, P.last_visit_date, P.description,
+O.host AS [Host URL], O.frecency AS [Host Frecency] 
+FROM moz_bookmarks B, moz_places P, moz_origins O
+WHERE B.fk = P.id AND P.origin_id = O.id
+ORDER BY P.frecency DESC
